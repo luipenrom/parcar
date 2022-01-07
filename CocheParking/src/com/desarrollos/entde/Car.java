@@ -30,10 +30,12 @@ public class Car
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
-        slowDown();
-        moveDown();
-        accelerate();
-        car.printGarage();
+/* Añadimos car. a los movimientos de reducir velocidad, movimiento, y aceleracion, porque han de estar vinculados al mismo */
+        car.slowDown();
+        car.moveDown();
+        car.accelerate();
+/* El garaje es g. no car., y por lo tanto, hay que modificarlo */
+        g.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -59,7 +61,8 @@ public class Car
      * @throws InterruptedException 
      */
     public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+/* String se debe escribir con la S en mayuscula */    	
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -74,8 +77,10 @@ public class Car
      * @throws InterruptedException 
      */    
     public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+/* String se debe escribir con la S en mayuscula */      	
+    	String c = new String("\t\t\t\t  *");
+/* la separacion se hace con punto y coma, no con coma */  
+    	for(int i=0; i<5; i++)
         {
     		if(i!=4)
     			System.out.println(c);
